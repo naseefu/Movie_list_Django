@@ -1,0 +1,11 @@
+body{
+    background-color: rgba(229, 239, 239, 0.44);
+    padding: 0;
+    margin: 0;
+}
+.all{
+    display: flex;
+}
+.m1{
+    margin-right: 100px;
+}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block body %}
+<br>
+    <style>
+        .a11{
+            margin-left: 20px;
+        }
+    </style>
+    <div class="a11">
+<h1 style="margin-left: 175px">Movie Details</h1>
+    <br>
+    <div class="all" style="justify-content: center">
+        <div class="image" style="margin-right: 100px">
+        <img src="{{ result.img.url }}" height="200px" width="200px">
+    </div>
+<div class="m1" style="margin-right: 100px">
+    <div class="mname"><strong>Movie Name:</strong> {{ result.name }}</div>
+    <br>
+    <div class="mname"><strong>Movie Detail:</strong> {{ result.desc }}</div>
+    <br>
+    <div class="mname"><strong>Year of Release: </strong>{{ result.year }}</div><br>
+    <a class="btn btn-warning" href="{% url 'movieapp:update' result.id %}" style="margin-right: 20px">Update</a>
+     <a class="btn btn-danger" href="{% url 'movieapp:delete' result.id %}">Delete</a>
+</div>
+
+    </div>
+
+    </div>
+
+{% endblock %}
